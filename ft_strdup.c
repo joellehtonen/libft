@@ -6,23 +6,11 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:59:42 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/22 11:12:31 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/23 15:53:51 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-
-static	int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
 
 char	*ft_strdup(const char *s1)
 {
