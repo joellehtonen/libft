@@ -6,11 +6,13 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:35:22 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/23 15:53:42 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/23 15:55:45 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.a"
+
+//unfinished
 
 static int	token_counter(const char *s, char c)
 {
