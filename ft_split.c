@@ -6,13 +6,11 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:35:22 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/24 10:47:21 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/24 16:40:38 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.a"
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 static int	token_len(const char *str, char c)
 {
@@ -25,7 +23,6 @@ static int	token_len(const char *str, char c)
 	}
 	return (i);
 }
-
 
 static int	token_counter(const char *s, char c)
 {
@@ -65,7 +62,6 @@ static char	*copier(const char *str, char delimiter)
 	return (pointer);
 }
 
-
 char	**ft_split(char const *s, char c)
 {
 	char	*token;
@@ -75,7 +71,7 @@ char	**ft_split(char const *s, char c)
 
 	token_count = token_counter(s, c);
 	printf("Token count: %d \n", token_count);
-	result = malloc(sizeof(char *) * (token_count));
+	result = malloc(sizeof(char *) * (token_count + 1));
 	if (result == NULL)
 		return (NULL);
 	index = 0;
@@ -93,19 +89,4 @@ char	**ft_split(char const *s, char c)
 	}
 	result[index] = NULL;
 	return (result);
-}
-
-int	main(void)
-{
-	char	**a;
-	int		i;
-
-	i = 0;
-	a = ft_split("123-456-7890", '-');
-	while (a[i])
-	{
-		printf ("%s \n", a[i]);
-		i++;
-	}
-	free(a);
 }
