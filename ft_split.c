@@ -6,11 +6,26 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:35:22 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/23 16:01:57 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/24 10:47:21 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.a"
+//#include "libft.a"
+#include <stdlib.h>
+#include <stdio.h>
+
+static int	token_len(const char *str, char c)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0' && str[i] != c)
+	{
+		i++;
+	}
+	return (i);
+}
+
 
 static int	token_counter(const char *s, char c)
 {
@@ -37,7 +52,7 @@ static char	*copier(const char *str, char delimiter)
 	char	*pointer;
 
 	index = 0;
-	len = strlen((char *)str);
+	len = token_len(str, delimiter);
 	pointer = malloc(sizeof(char) * (len + 1));
 	if (pointer == NULL)
 		return (NULL);
@@ -82,14 +97,14 @@ char	**ft_split(char const *s, char c)
 
 int	main(void)
 {
-	char	*a;
+	char	**a;
 	int		i;
 
 	i = 0;
-	a = *ft_split("123-456-7890", '-');
+	a = ft_split("123-456-7890", '-');
 	while (a[i])
 	{
-		printf ("%c", a[i]);
+		printf ("%s \n", a[i]);
 		i++;
 	}
 	free(a);
