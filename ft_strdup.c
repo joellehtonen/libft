@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:59:42 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/23 15:53:51 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/25 09:27:17 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,15 @@ char	*ft_strdup(const char *s1)
 		index++;
 	}
 	return (pointer);
+}
+
+int	main(void)
+{
+	char	*a;
+	char	*b;
+
+	a = ft_strdup("banana");
+	b = strdup("banana");
+	printf("%s \n", a);
+	printf("%s \n", b);
 }

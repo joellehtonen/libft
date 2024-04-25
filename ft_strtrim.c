@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 15:05:47 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/23 11:54:51 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/25 09:27:39 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	pointer[index] = '\0';
 	return (pointer);
+}
+
+int	main(void)
+{
+	char const	*s1;
+	char const	*set;
+	char		*a;
+
+	s1 = "?!?co?mo?!";
+	set = "?!";
+	a = ft_strtrim(s1, set);
+	printf("%s \n", a);
+	free(a);
 }

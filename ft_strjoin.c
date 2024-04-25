@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 13:41:57 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/22 15:40:20 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/25 09:27:31 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	pointer[index] = '\0';
 	return (pointer);
+}
+
+int	main(void)
+{
+	char	*a;
+
+	a = ft_strjoin("Zoo", "ropa");
+	printf("%s \n", a);
 }

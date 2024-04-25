@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 15:02:45 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/22 12:09:39 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/25 09:22:56 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,15 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
+
+int	main(void)
+{
+	int i;
+	int j;
+	
+	i = ft_isdigit('a');
+	j = isdigit('a');
+	printf("%d \n", i);
+	printf("%d \n", j);
+}
+

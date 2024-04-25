@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:35:22 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/24 16:40:38 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/25 09:27:49 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,4 +89,20 @@ char	**ft_split(char const *s, char c)
 	}
 	result[index] = NULL;
 	return (result);
+}
+
+int	main(void)
+{
+	char	**a;
+	int		i;
+
+	i = 0;
+	a = ft_split("asian-african-american", '-');
+	while (a[i])
+	{
+		printf ("%s \n", a[i]);
+		free(a[i]);
+		i++;
+	}
+	free(a);
 }

@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 14:49:17 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/19 16:35:33 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/25 09:24:35 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,19 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		n--;
 	}
 	return (dst);
+}
+
+int	main(void)
+{
+	char str1[] = "love";
+	char str2[] = "hate";
+	char str3[] = "love";
+	char str4[] = "hate";
+
+	printf("%s \n", str1);
+	printf("%s \n", str3);
+	ft_memcpy(str1, str2, 2);
+	memcpy(str3, str4, 2);
+	printf("%s \n", str1);
+	printf("%s \n", str3);
 }

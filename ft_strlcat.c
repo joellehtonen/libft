@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 10:50:01 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/22 15:03:24 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/25 09:25:20 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,19 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	*dst = '\0';
 	return (d_len + s_len);
+}
+
+int	main(void)
+{
+	char str1[9] = "mamma";
+	char str2[] = "mia";
+	char str3[9] = "mamma";
+	char str4[] = "mia";
+
+	printf("My func before alteration: %s \n", str1);
+	printf("Lib func before alteration: %s \n", str3);
+	ft_strlcat(str1, str2, 9);
+	strlcat(str3, str4, 9);
+	printf("My func after alteration: %s \n", str1);
+	printf("Lib func after alteration: %s \n", str3);
 }

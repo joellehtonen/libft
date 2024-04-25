@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 10:15:02 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/24 16:40:32 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/25 09:27:58 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,14 @@ char	*ft_itoa(int n)
 	pointer[index] = '\0';
 	reverse(pointer);
 	return (pointer);
+}
+
+int	main(void)
+{
+	int		n;
+	char	*a;
+
+	n = -1848;
+	a = ft_itoa(n);
+	printf("%s \n", a);
 }

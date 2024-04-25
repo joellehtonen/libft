@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 09:49:25 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/19 16:33:52 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/25 09:27:03 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,15 @@ int	ft_atoi(const char *str)
 		str++;
 	}
 	return (result * sign);
+}
+
+int main(void)
+{
+	int a;
+	int b;
+
+	a = ft_atoi("    ++42a123");
+	b = atoi("    ++42a123");
+	printf ("%d \n", a);
+	printf ("%d \n", b);
 }

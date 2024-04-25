@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 15:14:22 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/22 12:09:36 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/25 09:23:13 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,15 @@ int	ft_isascii(int c)
 		return (1);
 	else
 		return (0);
+}
+
+int	main(void)
+{
+	int i;
+	int j;
+
+	i = ft_isascii('a');
+	j = isascii('a');
+	printf("%d \n", i);
+	printf("%d \n", j);
 }

@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 12:48:18 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/23 09:53:04 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/25 09:27:24 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len--;
 	}
 	return (pointer);
+}
+
+int	main(void)
+{
+	char *a;
+
+	a = ft_substr("napoleon", 4, 4);
+	printf("%s \n", a);
 }
