@@ -6,12 +6,11 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:41:22 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/19 16:32:41 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/26 16:52:12 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdint.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -19,7 +18,7 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t			remaining_memory;
 	size_t			index;
 
-	if (count > SIZE_MAX / size)
+	if (count * size > SIZE_MAX)
 		return (NULL);
 	remaining_memory = (count * size);
 	index = 0;
