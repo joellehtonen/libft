@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 09:49:25 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/25 09:27:03 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/29 17:06:40 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_atoi(const char *str)
 		sign *= -1;
 		str++;
 	}
-	else
+	else if (*str == '+')
 		str++;
 	while (*str >= '0' && *str <= '9')
 	{
