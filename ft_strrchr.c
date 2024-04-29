@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 14:01:05 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/25 09:26:09 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/29 15:41:36 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ char	*ft_strrchr(const char *s, int c)
 		}
 		s++;
 	}
-	return (latest);
+	if (*s == (char)c)
+		return ((char *)s);
+	else
+		return (latest);
 }
 
 int	main(void)

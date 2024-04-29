@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 09:49:20 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/25 09:24:54 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/29 15:41:20 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	len = 0;
 	while (src[len] != '\0')
 		len++;
+	if (!dstsize)
+		return (len);
 	while (*src != '\0' && dstsize > 1)
 	{
 		*dst++ = *src++;
-		len++;
 		dstsize--;
 	}
 	*dst = '\0';
