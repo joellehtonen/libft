@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 12:09:50 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/26 17:06:39 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/30 16:34:50 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,21 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
+	t_list	*temp;
+
 	if (!new || !lst)
 		return ;
 	if ((*lst) == NULL)
 	{
 		*lst = new;
-		new->next = NULL;
 	}
 	else
 	{
-		while ((*lst)->next != NULL)
+		temp = *lst;
+		while (temp->next != NULL)
 		{
-			(*lst) = (*lst)->next;
+			temp = temp->next;
 		}
-		(*lst)->next = new;
-		new->next = NULL;
+		temp->next = new;
 	}
 }

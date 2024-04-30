@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 15:05:47 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/25 09:27:39 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/30 16:36:11 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ static	size_t	character_counter_end(char const *str, char const *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*pointer;
-	int		index;
+	size_t	index;
 	size_t	s_len;
 	size_t	counter_start;
 	size_t	counter_end;
@@ -65,17 +65,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 	s_len = ft_strlen((char *)s1);
 	counter_start = character_counter_start(s1, set);
 	counter_end = character_counter_end(s1, set);
-	pointer = malloc((s_len - counter_start - counter_end + 1) * sizeof(char));
+	if ((counter_start + counter_end) > s_len)
+		s_len = (counter_start + counter_end);
+	pointer = malloc(sizeof(char)
+			* (s_len - counter_start - counter_end) + 1);
 	if (pointer == NULL)
 		return (NULL);
 	s1 = s1 + counter_start;
 	index = 0;
-	while ((s_len - counter_start - counter_end) > (size_t)index)
-	{
-		pointer[index] = *s1;
-		index++;
-		s1++;
-	}
+	while ((s_len - counter_start - counter_end) > index)
+		pointer[index++] = *s1++;
 	pointer[index] = '\0';
 	return (pointer);
 }

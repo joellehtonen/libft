@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:59:42 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/25 09:27:17 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/04/30 10:17:13 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,11 @@ char	*ft_strdup(const char *s1)
 	int		len;
 	char	*pointer;
 
+	if (!s1)
+		return (NULL);
 	index = 0;
 	len = ft_strlen((char *)s1);
-	pointer = malloc((len + 1) * sizeof(char));
+	pointer = malloc(sizeof(char) * (len + 1));
 	if (pointer == NULL)
 		return (NULL);
 	while (s1[index] != '\0')
@@ -28,6 +30,7 @@ char	*ft_strdup(const char *s1)
 		pointer[index] = s1[index];
 		index++;
 	}
+	pointer[index] = '\0';
 	return (pointer);
 }
 
