@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:08:50 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/30 10:17:46 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/02 14:19:38 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <stdint.h>
+# include <limits.h>
 
 typedef struct s_list
 {

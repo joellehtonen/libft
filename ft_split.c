@@ -6,19 +6,19 @@
 /*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:35:22 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/05/01 14:08:34 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:56:30 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	token_counter(const char *s, char c)
+static size_t	token_counter(const char *s, char c)
 {
-	int	count;
-	int	index;
+	size_t	count;
+	size_t	index;
 
 	index = 0;
-	if (s[index] == c)
+	if (s[index] == c || s[index] == '\0')
 		count = 0;
 	else
 		count = 1;
@@ -34,9 +34,9 @@ static int	token_counter(const char *s, char c)
 	return (count);
 }
 
-static int	token_len(const char *str, char c)
+static size_t	token_len(const char *str, char c)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
 	while (str[len] != '\0' && str[len] != c)
@@ -46,71 +46,57 @@ static int	token_len(const char *str, char c)
 	return (len);
 }
 
-static char	*copier(const char *str, char delimiter)
+static void	free_array(char **str)
 {
-	int		index;
-	int		len;
-	char	*pointer;
+	int	i;
 
-	index = 0;
-	len = token_len(str, delimiter);
-	pointer = malloc(sizeof(char) * (len + 1));
-	if (pointer == NULL)
-	{
-		return (NULL);
-	}
-	while (str[index] != '\0' && str[index] != delimiter)
-	{
-		pointer[index] = str[index];
-		index++;
-	}
-	pointer[index] = '\0';
-	return (pointer);
-}
-
-void	free_array(char **str, int i)
-{
-	while (i > 0)
+	i = 0;
+	while (str[i])
 	{
 		free(str[i]);
-		i--;
+		i++;
 	}
 	free(str);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**splitter(const char *str, char delim, char **array, size_t count)
 {
-	char	*token;
-	int		index;
-	char	**result;
-	int		token_count;
+	size_t	index;
+	size_t	start;
 
-	token_count = token_counter(s, c);
-	result = malloc(sizeof(char *) * (token_count + 1));
-	if (result == NULL)
-		return (NULL);
 	index = 0;
-	while (*s != '\0')
+	start = 0;
+	while (index < count)
 	{
-		if (*s == c)
-			s++;
-		else
+		while (str[start] == delim && str[start] != '\0')
+			start++;
+		array[index] = ft_substr(str, start, token_len(str + start, delim));
+		if (!array[index])
 		{
-			token = copier(s, c);
-			if (!token)
-			{
-				free_array(result, token_count);
-				return (NULL);
-			}
-			result[index++] = token;
-			while (*s != '\0' && *s != c)
-				s++;
+			array[index] = NULL;
+			free_array(array);
+			return (NULL);
 		}
+		while (str[start] != '\0' && str[start] != delim)
+			start++;
+		index++;
 	}
-	result[index] = NULL;
-	return (result);
+	array[index] = NULL;
+	return (array);
 }
 
+char	**ft_split(char const *s, char c)
+{
+	char	**result;
+	size_t	token_count;
+
+	token_count = token_counter(s, c);
+	result = (char **)malloc(sizeof(char *) * (token_count + 1));
+	if (result == NULL)
+		return (NULL);
+	result = splitter(s, c, result, token_count);
+	return (result);
+}
 
 int	main(void)
 {
