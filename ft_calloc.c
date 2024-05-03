@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:41:22 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/26 16:52:12 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/03 13:53:28 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t			remaining_memory;
 	size_t			index;
 
-	if (count * size > SIZE_MAX)
-		return (NULL);
+	if (count != 0)
+	{
+		if (size > SIZE_MAX / count)
+			return (NULL);
+	}
 	remaining_memory = (count * size);
 	index = 0;
-	if (count < 1 || size < 1)
-		return (NULL);
 	pointer = malloc(count * size);
 	if (pointer == NULL)
 		return (NULL);
@@ -35,3 +36,4 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return ((void *)pointer);
 }
+
