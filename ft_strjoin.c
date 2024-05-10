@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 13:41:57 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/30 10:16:27 by jlehtone         ###   ########.fr       */
+/*   Created: 2024/05/02 10:01:00 by jlehtone          #+#    #+#             */
+/*   Updated: 2024/05/10 15:07:33 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*pointer;
+		char	*pointer;
 	size_t	index;
-	size_t	s1_len;
-	size_t	s2_len;
+	size_t	s_len;
 
 	index = 0;
-	s1_len = ft_strlen((char *)s1);
-	s2_len = ft_strlen((char *)s2);
-	pointer = malloc(sizeof(char) * ((s1_len + s2_len) + 1));
+	if (!s1 || !s2)
+		return (NULL);
+	s_len = (ft_strlen((char *)s1) + ft_strlen((char *)s2));
+	pointer = malloc(sizeof(char) * ((s_len) + 1));
 	if (pointer == NULL)
 		return (NULL);
 	while (*s1 != '\0')
@@ -39,12 +39,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	pointer[index] = '\0';
 	return (pointer);
-}
-
-int	main(void)
-{
-	char	*a;
-
-	a = ft_strjoin("Zoo", "ropa");
-	printf("%s \n", a);
 }

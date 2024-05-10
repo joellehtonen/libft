@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 13:09:50 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/25 09:26:00 by jlehtone         ###   ########.fr       */
+/*   Created: 2024/05/02 10:00:45 by jlehtone          #+#    #+#             */
+/*   Updated: 2024/05/10 14:13:10 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,25 +17,11 @@ char	*ft_strchr(const char *s, int c)
 	char	a;
 
 	a = c;
-	if (s == 0)
-		return (0);
+	if (s == NULL)
+		return (NULL);
 	while (*s != '\0' && *s != a)
-	{
 		s++;
-	}
 	if (*s == a)
 		return ((char *)s);
-	return (0);
-}
-
-int	main(void)
-{
-	char *a;
-	char *b;
-
-	a = ft_strchr("Mozart", 'z');
-	b = strchr("Mozart", 'z');
-
-	printf("%s \n", a);
-	printf("%s \n", b);
+	return (NULL);
 }
