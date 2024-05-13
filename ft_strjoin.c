@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 10:01:00 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/05/10 15:07:33 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/13 14:15:05 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-		char	*pointer;
+	char	*pointer;
 	size_t	index;
 	size_t	s_len;
 
 	index = 0;
-	if (!s1 || !s2)
-		return (NULL);
+	//if (!s1 || !s2)
+	//	return (NULL);
 	s_len = (ft_strlen((char *)s1) + ft_strlen((char *)s2));
 	pointer = malloc(sizeof(char) * ((s_len) + 1));
 	if (pointer == NULL)
