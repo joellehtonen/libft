@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 12:38:38 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/25 15:01:00 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/21 13:39:17 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,4 @@
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
-}
-
-int	main(void)
-{
-	ft_putchar_fd('X', 1);
-	ft_putchar_fd('\n', 1);
 }

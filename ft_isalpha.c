@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:34:23 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/25 09:22:49 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/21 13:38:08 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,4 @@ int	ft_isalpha(int c)
 		return (1);
 	else
 		return (0);
-}
-
-int	main(void)
-{
-	int i;
-	int j;
-	
-	i = ft_isalpha('a');
-	j = isalpha('a');
-	printf("%d \n", i);
-	printf("%d \n", j);
 }

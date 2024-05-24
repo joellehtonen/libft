@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 15:19:36 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/25 16:19:50 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/21 13:39:26 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,4 @@ void	ft_putnbr_fd(int n, int fd)
 	{
 		ft_putchar_fd(n + '0', fd);
 	}
-}
-
-int	main(void)
-{
-	ft_putnbr_fd(2024, 1);
-	ft_putchar_fd('\n', 1);
 }

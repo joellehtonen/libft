@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 14:26:23 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/25 09:26:20 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/21 13:40:47 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,4 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		n--;
 	}
 	return (*s1 - *s2);
-}
-
-int	main(void)
-{
-	char *s1 = "everest";
-	char *s2 = "eveRest";
-	int a;
-	int	b;
-
-	a = ft_strncmp(s1, s2, 5);
-	b = strncmp(s1, s2, 5);
-	printf("%d \n", a);
-	printf("%d \n", b);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 10:15:02 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/30 14:20:13 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/21 13:38:36 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,19 +54,4 @@ char	*ft_itoa(int n)
 	if (sign == 1)
 		*pointer = '-';
 	return (pointer);
-}
-
-int	main(void)
-{
-	char *i1 = ft_itoa(-623);
- 	char *i2 = ft_itoa(156);
- 	char *i3 = ft_itoa(-0);
-	char *i4 = ft_itoa(-2147483648);
-	char *i5 = ft_itoa(2147483647);
-
-	printf("%s \n", i1);
-	printf("%s \n", i2);
-	printf("%s \n", i3);
-	printf("%s \n", i4);
-	printf("%s \n", i5);
 }

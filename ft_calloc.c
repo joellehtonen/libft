@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:41:22 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/05/03 13:53:28 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/21 13:36:58 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,3 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return ((void *)pointer);
 }
-

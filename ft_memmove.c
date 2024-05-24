@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 15:55:54 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/25 09:24:44 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/21 13:39:08 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,19 +36,4 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		}
 	}
 	return (dst);
-}
-
-int	main(void)
-{
-	char str1[] = "mac";
-	char str2[] = "computer";
-	char str3[] = "mac";
-	char str4[] = "computer";
-
-	printf("%s \n", str1);
-	printf("%s \n", str3);
-	ft_memmove(str1, str2, 1);
-	memmove(str3, str4, 1);
-	printf("%s \n", str1);
-	printf("%s \n", str3);
 }

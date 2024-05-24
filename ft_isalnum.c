@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 15:08:47 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/25 09:23:04 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/21 13:37:05 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-
-int	main(void)
-{
-	int i;
-	int j;
-	
-	i = ft_isalnum('a');
-	j = isalnum('a');
-	printf("%d \n", i);
-	printf("%d \n", j);
-}
-

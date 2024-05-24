@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 15:05:47 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/30 16:36:11 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/21 13:41:03 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,17 +77,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 		pointer[index++] = *s1++;
 	pointer[index] = '\0';
 	return (pointer);
-}
-
-int	main(void)
-{
-	char const	*s1;
-	char const	*set;
-	char		*a;
-
-	s1 = "?!?co?mo?!";
-	set = "?!";
-	a = ft_strtrim(s1, set);
-	printf("%s \n", a);
-	free(a);
 }

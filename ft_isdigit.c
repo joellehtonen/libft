@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 15:02:45 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/25 09:22:56 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/21 13:38:19 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,3 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
-
-int	main(void)
-{
-	int i;
-	int j;
-	
-	i = ft_isdigit('a');
-	j = isdigit('a');
-	printf("%d \n", i);
-	printf("%d \n", j);
-}
-

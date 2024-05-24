@@ -6,7 +6,7 @@
 /*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:57:08 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/05/02 13:57:09 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/21 13:40:52 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,4 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		len--;
 	}
 	return (NULL);
-}
-
-int	main(void)
-{
-	char	*a;
-	char	*b;
-
-	a = ft_strnstr("flamingo-mike", "mike", 15);
-	b = strnstr("flamingo-mike", "mike", 15);
-	printf("%s \n", a);
-	printf("%s \n", b);
 }

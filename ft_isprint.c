@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 10:07:28 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/25 09:23:21 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/21 13:38:23 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,4 @@ int	ft_isprint(int c)
 		return (1);
 	else
 		return (0);
-}
-
-int	main(void)
-{
-	int i;
-	int j;
-
-	i = ft_isprint('a');
-	j = isprint('a');
-	printf("%d \n", i);
-	printf("%d \n", j);
 }

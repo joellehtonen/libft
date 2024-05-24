@@ -6,11 +6,9 @@
 /*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 09:49:25 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/05/03 13:53:14 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/21 13:36:47 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 #include "libft.h"
 
@@ -41,24 +39,4 @@ int	ft_atoi(const char *str)
 		str++;
 	}
 	return ((int)result);
-}
-
-int main(void)
-{
- int a = ft_atoi("12345");
- int b = ft_atoi("-456");
- int c = ft_atoi("2147483647");
- int d = ft_atoi("99999999999999999999");
- int e = atoi("99999999999999999999");
-
-int f = atoi("2147483650");
-int g = ft_atoi("2147483650");
-
- printf ("%d \n", a);
- printf ("%d \n", b); 
- printf ("%d \n", c);
- printf ("%d \n", d);
- printf ("%d \n", e);
- printf ("%d \n", f);
- printf ("%d \n", g);
 }

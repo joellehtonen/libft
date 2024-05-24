@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 15:11:32 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/25 15:18:54 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/21 13:39:21 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,4 @@ void	ft_putendl_fd(char *s, int fd)
 		len++;
 	write(fd, s, len);
 	write(fd, "\n", 1);
-}
-
-int	main(void)
-{
-	ft_putendl_fd("this is followed by a newline \n", 1);
 }

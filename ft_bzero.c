@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:55:58 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/25 09:24:26 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/21 13:36:54 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,4 @@ void	ft_bzero(void *s, size_t n)
 		c++;
 		n--;
 	}
-}
-
-int	main(void)
-{
-    char str1[10] = "banana";
-    char str2[10] = "banana";
-
-    printf("%s \n", str1);
-    printf("%s \n", str2);
-    bzero(str1, 2);
-    ft_bzero(str2, 2);
-    printf("%s \n", str1);
-    printf("%s \n", str2);
 }

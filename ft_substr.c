@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 12:48:18 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/30 16:35:45 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/21 13:41:08 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	pointer[index] = '\0';
 	return (pointer);
-}
-
-int	main(void)
-{
-	char *a;
-
-	a = ft_substr("napoleon", 4, 4);
-	printf("%s \n", a);
 }
