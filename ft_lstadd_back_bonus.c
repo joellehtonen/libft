@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 12:09:50 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/30 16:34:50 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/24 14:22:56 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

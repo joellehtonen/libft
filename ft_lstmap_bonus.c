@@ -3,33 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlehtone <jlehtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jlehtone <jlehtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 15:06:01 by jlehtone          #+#    #+#             */
-/*   Updated: 2024/04/26 16:36:46 by jlehtone         ###   ########.fr       */
+/*   Updated: 2024/05/24 14:23:53 by jlehtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static void	del_content(void *content)
-{
-	free(content);
-}
-
-static void	capitalize_content(void *content)
-{
-	size_t	i;
-	char	*result;
-
-	result = (char *)content;
-	i = 0;
-	while (result[i])
-	{
-		result[i] = ft_toupper(result[i]);
-		i++;
-	}
-}
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
