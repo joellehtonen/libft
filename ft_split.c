@@ -90,10 +90,17 @@ char	**ft_split(char const *s, char c)
 	char	**result;
 	size_t	token_count;
 
+	if (!s)
+		return (NULL);
 	token_count = token_counter(s, c);
 	result = (char **)malloc(sizeof(char *) * (token_count + 1));
 	if (result == NULL)
 		return (NULL);
 	result = splitter(s, c, result, token_count);
+	if (result == NULL)
+	{
+		free(result);
+		return (NULL);
+	}
 	return (result);
 }
